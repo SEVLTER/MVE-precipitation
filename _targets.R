@@ -6,13 +6,21 @@ library(tarchetypes)
 library(fs)
 
 # Set target options
-tar_option_set()
+tar_option_set(
+  packages = c("readr")
+)
 
 # Source R scripts
 tar_source()
 
-# Prepare directories
+# Prepare output directory
 dir_create("output")
 
 # Define the target list
-list()
+list(
+  tar_file_read(
+    stations,
+    "input/stations.csv",
+    read_csv(!!.x, progress = FALSE, show_col_types = FALSE)
+  )
+)
