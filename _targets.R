@@ -7,11 +7,21 @@ library(fs)
 
 # Set target options
 tar_option_set(
-  packages = c("readr")
+  packages = c(
+    "dplyr",
+    "tidyr",
+    "tibble",
+    "lubridate",
+    "readr",
+    "EDIutils"
+  )
 )
 
 # Source R scripts
 tar_source()
+
+# Define global objects
+sites <- c("black", "blue", "creosote", "jsav", "pj")
 
 # Prepare output directory
 dir_create("output")
@@ -22,5 +32,12 @@ list(
     stations,
     "input/stations.csv",
     read_csv(!!.x, progress = FALSE, show_col_types = FALSE)
+  ),
+  tar_map(
+    list(site = sites),
+    tar_target(
+      precipitation,
+      download_precipitation(site, stations)
+    )
   )
 )
