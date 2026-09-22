@@ -2,7 +2,7 @@
 
 This repository contains an R pipeline for constructing a data set of plot-level treatments and precipitation histories for the mean-variance experiment at the SEV LTER. The pipeline is implemented with [`targets`](https://docs.ropensci.org/targets/) and R packages are managed with [`renv`](https://rstudio.github.io/renv/).
 
-**Do once before running the pipeline:**
+**Once before running the pipeline:**
 
 Obtain an API key for [EDI](https://edirepository.org/) via the [EDI IAM portal](https://auth.edirepository.org/auth/ui/signin) and add it to `~/.Renviron` in the form `EDI_API_KEY=key` (where `key` is your API key). See [here](https://github.com/ropensci/EDIutils#authentication) for details. The `.Renviron` file can be conveniently created or opened with:
 
@@ -30,5 +30,5 @@ usethis::edit_r_environ()
 
     This will:
 
-    i.  Create target objects (.rds) in a `_targets` directory.
-    ii. Output data (.csv) and figures (.png) in an `output` directory.
+    1.  Create target objects (.rds) in a `_targets` directory.
+    2.  Output data (.csv) and figures (.png) in an `output` directory.
