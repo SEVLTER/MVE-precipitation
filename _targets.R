@@ -33,6 +33,11 @@ list(
     "input/stations.csv",
     read_csv(!!.x, progress = FALSE, show_col_types = FALSE)
   ),
+  tar_file_read(
+    treatments,
+    "input/treatments.csv",
+    read_csv(!!.x, progress = FALSE, show_col_types = FALSE)
+  ),
   tar_map(
     list(site = sites),
     tar_target(

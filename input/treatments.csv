@@ -1,0 +1,151 @@
+site,block,plot,mean_treatment,variance_treatment,var_treatment_2019,var_treatment_2020,var_treatment_2021,var_treatment_2022,var_treatment_2023,var_treatment_2024,var_treatment_2025
+meanvar_black,1,1,ambient,ambient,,ambient,ambient,ambient,ambient,ambient,ambient
+meanvar_black,1,2,ambient,more variance,,increase,increase,decrease,increase,increase,increase
+meanvar_black,1,3,ambient,more variance,,decrease,decrease,increase,decrease,decrease,decrease
+meanvar_black,1,4,reduced,ambient,,ambient,ambient,ambient,ambient,ambient,ambient
+meanvar_black,1,5,reduced,more variance,,decrease,decrease,decrease,decrease,decrease,increase
+meanvar_black,1,6,reduced,more variance,,increase,increase,increase,increase,increase,decrease
+meanvar_black,2,7,reduced,ambient,,ambient,ambient,ambient,ambient,ambient,ambient
+meanvar_black,2,8,reduced,more variance,,increase,decrease,increase,decrease,increase,increase
+meanvar_black,2,9,reduced,more variance,,decrease,increase,decrease,increase,decrease,decrease
+meanvar_black,2,10,ambient,more variance,,increase,increase,decrease,decrease,increase,decrease
+meanvar_black,2,11,ambient,more variance,,decrease,decrease,increase,increase,decrease,increase
+meanvar_black,2,12,ambient,ambient,,ambient,ambient,ambient,ambient,ambient,ambient
+meanvar_black,3,13,reduced,more variance,,increase,increase,decrease,decrease,increase,increase
+meanvar_black,3,14,reduced,more variance,,decrease,decrease,increase,increase,decrease,decrease
+meanvar_black,3,15,reduced,ambient,,ambient,ambient,ambient,ambient,ambient,ambient
+meanvar_black,3,16,ambient,more variance,,decrease,increase,increase,increase,decrease,decrease
+meanvar_black,3,17,ambient,more variance,,increase,decrease,decrease,decrease,increase,increase
+meanvar_black,3,18,ambient,ambient,,ambient,ambient,ambient,ambient,ambient,ambient
+meanvar_black,4,19,ambient,ambient,,ambient,ambient,ambient,ambient,ambient,ambient
+meanvar_black,4,20,ambient,more variance,,increase,decrease,decrease,increase,decrease,decrease
+meanvar_black,4,21,ambient,more variance,,decrease,increase,increase,decrease,increase,increase
+meanvar_black,4,22,reduced,ambient,,ambient,ambient,ambient,ambient,ambient,ambient
+meanvar_black,4,23,reduced,more variance,,decrease,decrease,increase,decrease,decrease,decrease
+meanvar_black,4,24,reduced,more variance,,increase,increase,decrease,increase,increase,increase
+meanvar_black,5,25,reduced,ambient,,ambient,ambient,ambient,ambient,ambient,ambient
+meanvar_black,5,26,reduced,more variance,,increase,decrease,decrease,increase,increase,increase
+meanvar_black,5,27,reduced,more variance,,decrease,increase,increase,decrease,decrease,decrease
+meanvar_black,5,28,ambient,more variance,,decrease,decrease,decrease,increase,increase,decrease
+meanvar_black,5,29,ambient,more variance,,increase,increase,increase,decrease,decrease,increase
+meanvar_black,5,30,ambient,ambient,,ambient,ambient,ambient,ambient,ambient,ambient
+meanvar_blue,1,1,ambient,more variance,increase,increase,decrease,increase,decrease,increase,decrease
+meanvar_blue,1,2,ambient,more variance,decrease,decrease,increase,decrease,increase,decrease,increase
+meanvar_blue,1,3,ambient,ambient,ambient,ambient,ambient,ambient,ambient,ambient,ambient
+meanvar_blue,1,4,reduced,more variance,decrease,decrease,decrease,decrease,increase,increase,increase
+meanvar_blue,1,5,reduced,more variance,increase,increase,increase,increase,decrease,decrease,decrease
+meanvar_blue,1,6,reduced,ambient,ambient,ambient,ambient,ambient,ambient,ambient,ambient
+meanvar_blue,2,7,reduced,more variance,decrease,increase,decrease,increase,increase,increase,decrease
+meanvar_blue,2,8,reduced,more variance,increase,decrease,increase,decrease,decrease,decrease,increase
+meanvar_blue,2,9,reduced,ambient,ambient,ambient,ambient,ambient,ambient,ambient,ambient
+meanvar_blue,2,10,ambient,more variance,increase,decrease,increase,increase,decrease,decrease,increase
+meanvar_blue,2,11,ambient,more variance,decrease,increase,decrease,decrease,increase,increase,decrease
+meanvar_blue,2,12,ambient,ambient,ambient,ambient,ambient,ambient,ambient,ambient,ambient
+meanvar_blue,3,13,ambient,ambient,ambient,ambient,ambient,ambient,ambient,ambient,ambient
+meanvar_blue,3,14,ambient,more variance,increase,increase,increase,decrease,decrease,increase,increase
+meanvar_blue,3,15,ambient,more variance,decrease,decrease,decrease,increase,increase,decrease,decrease
+meanvar_blue,3,16,reduced,ambient,ambient,ambient,ambient,ambient,ambient,ambient,ambient
+meanvar_blue,3,17,reduced,more variance,decrease,increase,increase,increase,decrease,increase,increase
+meanvar_blue,3,18,reduced,more variance,increase,decrease,decrease,decrease,increase,decrease,decrease
+meanvar_blue,4,19,ambient,more variance,decrease,decrease,decrease,decrease,increase,increase,decrease
+meanvar_blue,4,20,ambient,more variance,increase,increase,increase,increase,decrease,decrease,increase
+meanvar_blue,4,21,ambient,ambient,ambient,ambient,ambient,ambient,ambient,ambient,ambient
+meanvar_blue,4,22,reduced,ambient,ambient,ambient,ambient,ambient,ambient,ambient,ambient
+meanvar_blue,4,23,reduced,more variance,decrease,increase,increase,increase,increase,increase,decrease
+meanvar_blue,4,24,reduced,more variance,increase,decrease,decrease,decrease,decrease,decrease,increase
+meanvar_blue,5,25,reduced,more variance,increase,increase,decrease,increase,decrease,increase,increase
+meanvar_blue,5,26,reduced,more variance,decrease,decrease,increase,decrease,increase,decrease,decrease
+meanvar_blue,5,27,reduced,ambient,ambient,ambient,ambient,ambient,ambient,ambient,ambient
+meanvar_blue,5,28,ambient,more variance,decrease,increase,decrease,decrease,decrease,increase,increase
+meanvar_blue,5,29,ambient,more variance,increase,decrease,increase,increase,increase,decrease,decrease
+meanvar_blue,5,30,ambient,ambient,ambient,ambient,ambient,ambient,ambient,ambient,ambient
+meanvar_creo,1,1,reduced,more variance,,,decrease,increase,increase,decrease,decrease
+meanvar_creo,1,2,reduced,more variance,,,increase,decrease,decrease,increase,increase
+meanvar_creo,1,3,reduced,ambient,,,ambient,ambient,ambient,ambient,ambient
+meanvar_creo,1,4,ambient,more variance,,,decrease,decrease,decrease,increase,increase
+meanvar_creo,1,5,ambient,more variance,,,increase,increase,increase,decrease,decrease
+meanvar_creo,1,6,ambient,ambient,,,ambient,ambient,ambient,ambient,ambient
+meanvar_creo,2,7,ambient,more variance,,,increase,decrease,increase,decrease,increase
+meanvar_creo,2,8,ambient,more variance,,,decrease,increase,decrease,increase,decrease
+meanvar_creo,2,9,ambient,ambient,,,ambient,ambient,ambient,ambient,ambient
+meanvar_creo,2,10,reduced,ambient,,,ambient,ambient,ambient,ambient,ambient
+meanvar_creo,2,11,reduced,more variance,,,decrease,decrease,decrease,decrease,decrease
+meanvar_creo,2,12,reduced,more variance,,,increase,increase,increase,increase,increase
+meanvar_creo,3,13,ambient,ambient,,,ambient,ambient,ambient,ambient,ambient
+meanvar_creo,3,14,ambient,more variance,,,increase,increase,decrease,decrease,decrease
+meanvar_creo,3,15,ambient,more variance,,,decrease,decrease,increase,increase,increase
+meanvar_creo,3,16,reduced,ambient,,,ambient,ambient,ambient,ambient,ambient
+meanvar_creo,3,17,reduced,more variance,,,increase,decrease,decrease,increase,decrease
+meanvar_creo,3,18,reduced,more variance,,,decrease,increase,increase,decrease,increase
+meanvar_creo,4,19,reduced,ambient,,,ambient,ambient,ambient,ambient,ambient
+meanvar_creo,4,20,reduced,more variance,,,increase,increase,increase,decrease,increase
+meanvar_creo,4,21,reduced,more variance,,,decrease,decrease,decrease,increase,decrease
+meanvar_creo,4,22,ambient,more variance,,,increase,decrease,decrease,increase,decrease
+meanvar_creo,4,23,ambient,more variance,,,decrease,increase,increase,decrease,increase
+meanvar_creo,4,24,ambient,ambient,,,ambient,ambient,ambient,ambient,ambient
+meanvar_creo,5,25,ambient,more variance,,,increase,increase,decrease,decrease,decrease
+meanvar_creo,5,26,ambient,more variance,,,decrease,decrease,increase,increase,increase
+meanvar_creo,5,27,ambient,ambient,,,ambient,ambient,ambient,ambient,ambient
+meanvar_creo,5,28,reduced,ambient,,,ambient,ambient,ambient,ambient,ambient
+meanvar_creo,5,29,reduced,more variance,,,decrease,increase,increase,decrease,increase
+meanvar_creo,5,30,reduced,more variance,,,increase,decrease,decrease,increase,decrease
+meanvar_jsav,1,1,ambient,more variance,,,,increase,increase,increase,decrease
+meanvar_jsav,1,2,ambient,more variance,,,,decrease,decrease,decrease,increase
+meanvar_jsav,1,3,ambient,ambient,,,,ambient,ambient,ambient,ambient
+meanvar_jsav,1,4,reduced,more variance,,,,decrease,increase,decrease,increase
+meanvar_jsav,1,5,reduced,ambient,,,,ambient,ambient,ambient,ambient
+meanvar_jsav,1,6,reduced,more variance,,,,increase,decrease,increase,decrease
+meanvar_jsav,2,8,reduced,ambient,,,,ambient,ambient,ambient,ambient
+meanvar_jsav,2,9,ambient,ambient,,,,ambient,ambient,ambient,ambient
+meanvar_jsav,2,10,reduced,more variance,,,,decrease,decrease,decrease,decrease
+meanvar_jsav,2,11,ambient,more variance,,,,decrease,decrease,increase,increase
+meanvar_jsav,2,12,ambient,more variance,,,,increase,increase,decrease,decrease
+meanvar_jsav,2,13,reduced,more variance,,,,increase,increase,increase,increase
+meanvar_jsav,3,7,reduced,ambient,,,,ambient,ambient,ambient,ambient
+meanvar_jsav,3,22,ambient,more variance,,,,increase,increase,increase,increase
+meanvar_jsav,3,23,ambient,more variance,,,,decrease,decrease,decrease,decrease
+meanvar_jsav,3,28,reduced,more variance,,,,increase,decrease,increase,increase
+meanvar_jsav,3,29,reduced,more variance,,,,decrease,increase,decrease,decrease
+meanvar_jsav,3,30,ambient,ambient,,,,ambient,ambient,ambient,ambient
+meanvar_jsav,4,15,ambient,more variance,,,,decrease,decrease,increase,increase
+meanvar_jsav,4,16,ambient,more variance,,,,increase,increase,decrease,decrease
+meanvar_jsav,4,17,ambient,ambient,,,,ambient,ambient,ambient,ambient
+meanvar_jsav,4,25,reduced,ambient,,,,ambient,ambient,ambient,ambient
+meanvar_jsav,4,26,reduced,more variance,,,,increase,increase,increase,decrease
+meanvar_jsav,4,27,reduced,more variance,,,,decrease,decrease,decrease,increase
+meanvar_jsav,5,14,ambient,ambient,,,,ambient,ambient,ambient,ambient
+meanvar_jsav,5,18,ambient,more variance,,,,decrease,increase,increase,decrease
+meanvar_jsav,5,19,ambient,more variance,,,,increase,decrease,decrease,increase
+meanvar_jsav,5,20,reduced,more variance,,,,increase,increase,increase,increase
+meanvar_jsav,5,21,reduced,ambient,,,,ambient,ambient,ambient,ambient
+meanvar_jsav,5,24,reduced,more variance,,,,decrease,decrease,decrease,decrease
+meanvar_pj,1,1,ambient,ambient,,,,,ambient,ambient,ambient
+meanvar_pj,1,2,reduced,ambient,,,,,ambient,ambient,ambient
+meanvar_pj,1,3,ambient,more variance,,,,,increase,increase,increase
+meanvar_pj,1,4,ambient,more variance,,,,,decrease,decrease,decrease
+meanvar_pj,1,5,reduced,more variance,,,,,decrease,increase,increase
+meanvar_pj,1,6,reduced,more variance,,,,,increase,decrease,decrease
+meanvar_pj,2,7,ambient,more variance,,,,,increase,decrease,decrease
+meanvar_pj,2,8,ambient,more variance,,,,,decrease,increase,increase
+meanvar_pj,2,9,reduced,ambient,,,,,ambient,ambient,ambient
+meanvar_pj,2,10,reduced,more variance,,,,,increase,increase,decrease
+meanvar_pj,2,11,reduced,more variance,,,,,decrease,decrease,increase
+meanvar_pj,2,12,ambient,ambient,,,,,ambient,ambient,ambient
+meanvar_pj,3,13,reduced,more variance,,,,,decrease,increase,increase
+meanvar_pj,3,14,reduced,more variance,,,,,increase,decrease,decrease
+meanvar_pj,3,15,ambient,ambient,,,,,ambient,ambient,ambient
+meanvar_pj,3,16,ambient,more variance,,,,,increase,decrease,increase
+meanvar_pj,3,17,ambient,more variance,,,,,decrease,increase,decrease
+meanvar_pj,3,18,reduced,ambient,,,,,ambient,ambient,ambient
+meanvar_pj,4,19,ambient,ambient,,,,,ambient,ambient,ambient
+meanvar_pj,4,20,ambient,more variance,,,,,increase,increase,increase
+meanvar_pj,4,21,ambient,more variance,,,,,decrease,decrease,decrease
+meanvar_pj,4,22,reduced,ambient,,,,,ambient,ambient,ambient
+meanvar_pj,4,23,reduced,more variance,,,,,decrease,decrease,decrease
+meanvar_pj,4,24,reduced,more variance,,,,,increase,increase,increase
+meanvar_pj,5,25,ambient,more variance,,,,,decrease,increase,decrease
+meanvar_pj,5,26,ambient,more variance,,,,,increase,decrease,increase
+meanvar_pj,5,27,reduced,more variance,,,,,increase,decrease,increase
+meanvar_pj,5,28,reduced,more variance,,,,,decrease,increase,decrease
+meanvar_pj,5,29,reduced,ambient,,,,,ambient,ambient,ambient
+meanvar_pj,5,30,ambient,ambient,,,,,ambient,ambient,ambient
