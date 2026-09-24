@@ -1,5 +1,12 @@
 # Pipeline inputs
 
+## MVE-flip-dates.csv
+
+Table of MVE shelter flip dates.
+
+- **site**: Name of MVE site.
+- **flip_YYYY**: MVE shelter flip date in year YYYY.
+
 ## MVE-start-dates.csv
 
 Table of MVE treatment start dates. Note that start dates are approximate and conservative (e.g., allow for some tweaking after initial setup before treatments are considered to have started), based on personal communications and inspection of soil moisture data.
