@@ -29,6 +29,18 @@ dir_create("output")
 # Define the target list
 list(
   tar_file_read(
+    start_dates,
+    "input/MVE-start-dates.csv",
+    read_csv(!!.x, progress = FALSE, show_col_types = FALSE) %>%
+      mutate(date = as.Date(date, format = "%m/%d/%y"))
+  ),
+  tar_file_read(
+    flip_dates,
+    "input/MVE-flip-dates.csv",
+    read_csv(!!.x, progress = FALSE, show_col_types = FALSE) %>%
+      mutate(across(starts_with("flip_"), \(x) as.Date(x, format = "%m/%d/%y")))
+  ),
+  tar_file_read(
     stations,
     "input/stations.csv",
     read_csv(!!.x, progress = FALSE, show_col_types = FALSE)
@@ -40,6 +52,10 @@ list(
   ),
   tar_map(
     list(site = sites),
+    tar_target(
+      processed_treatments,
+      process_treatments(site, treatments, start_dates, flip_dates)
+    ),
     tar_target(
       precipitation,
       download_precipitation(site, stations)
