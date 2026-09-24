@@ -32,13 +32,13 @@ list(
     start_dates,
     "input/MVE-start-dates.csv",
     read_csv(!!.x, progress = FALSE, show_col_types = FALSE) %>%
-      mutate(date = as.Date(date, format = "%m/%d/%y"))
+      mutate(date = as_date(date, format = "%m/%d/%y"))
   ),
   tar_file_read(
     flip_dates,
     "input/MVE-flip-dates.csv",
     read_csv(!!.x, progress = FALSE, show_col_types = FALSE) %>%
-      mutate(across(starts_with("flip_"), \(x) as.Date(x, format = "%m/%d/%y")))
+      mutate(across(starts_with("flip_"), \(x) as_date(x, format = "%m/%d/%y")))
   ),
   tar_file_read(
     stations,

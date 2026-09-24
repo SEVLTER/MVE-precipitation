@@ -94,7 +94,7 @@ df <-
   df %>%
   group_by(year, month, day, depth, plot, mean_var_trt) %>%
   summarize(value = mean(value, na.rm = TRUE), .groups = "drop") %>%
-  mutate(date = as.Date(paste(year, month, day, sep = "-")), .before = 1)
+  mutate(date = as_date(paste(year, month, day, sep = "-")), .before = 1)
 
 # Compute coefficient of variation (CV) of soil moisture across plots
 df_cv <- 
