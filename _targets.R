@@ -21,7 +21,7 @@ tar_option_set(
 tar_source()
 
 # Define global objects
-sites <- c("black", "blue", "creosote", "jsav", "pj")
+sites <- c("blue", "black", "creosote", "jsav", "pj")
 
 # Prepare output directory
 dir_create("output")
