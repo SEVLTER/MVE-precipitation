@@ -146,11 +146,19 @@ process_precipitation <- function(precipitation, processed_treatments) {
         bind_rows(daily_trts_j)
     }
     
-    # Join daily treatment info to precipitation data
+    # Join daily treatment info to hourly precipitation data
     prec_i <- 
       prec %>%
       left_join(df, by = join_by(Site == site, Date == date)) %>%
-      filter(Date >= min(trts_i$date), Date <= end)
+      filter(Date <= end)
+    
+    # Fill missing block and plot IDs
+    prec_i <- 
+      prec_i %>%
+      mutate(
+        block = replace_na(unique(na.omit(block))),
+        plot = replace_na(unique(na.omit(plot)))
+      )
     
     # Bind to output
     out <- 
@@ -161,7 +169,13 @@ process_precipitation <- function(precipitation, processed_treatments) {
   # Compute precipitation history
   out <- 
     out %>%
-    mutate(Precipitation = Precipitation * (1 + (mean_var_val) / 100))
+    mutate(
+      Precipitation = if_else(
+        !is.na(mean_var_val),
+        Precipitation * (1 + (mean_var_val / 100)),
+        Precipitation
+      )
+    )
   
   # Clean up output
   out <- 

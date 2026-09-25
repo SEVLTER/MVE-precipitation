@@ -77,8 +77,9 @@ process_treatments <- function(site, treatments, start_dates, flip_dates) {
   # Bind start dates to flip dates
   flip_dates_long <- 
     start_dates %>%
-    mutate(year = year(date)) %>%
-    bind_rows(flip_dates_long)
+    mutate(year = year(date), .before = date) %>%
+    bind_rows(flip_dates_long) %>%
+    arrange(site, year)
   
   # Join start/flip dates to treatments
   out <- 
