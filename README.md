@@ -31,4 +31,5 @@ usethis::edit_r_environ()
     This will:
 
     1.  Create target objects (.rds) in a `_targets` directory.
-    2.  Output data (.csv) and figures (.png) in an `output` directory.
+    2.  Create figures (.png) in a `figures` directory.
+    3.  Output processed data (.csv) in an `output` directory.

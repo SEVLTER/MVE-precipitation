@@ -13,7 +13,8 @@ tar_option_set(
     "tibble",
     "lubridate",
     "readr",
-    "EDIutils"
+    "EDIutils",
+    "ggplot2"
   )
 )
 
@@ -23,7 +24,8 @@ tar_source()
 # Define global objects
 sites <- c("blue", "black", "creosote", "jsav", "pj")
 
-# Prepare output directory
+# Prepare output directories
+dir_create("figures")
 dir_create("output")
 
 # Define the target list
@@ -63,6 +65,15 @@ list(
     tar_target(
       processed_precipitation,
       process_precipitation(precipitation, processed_treatments)
+    ),
+    tar_file(
+      figure_precipitation,
+      plot_precipitation(
+        processed_precipitation,
+        paste0("figures/MVE-precipitation-", site, ".png"),
+        width = 12,
+        height = 8
+      )
     )
   )
 )
