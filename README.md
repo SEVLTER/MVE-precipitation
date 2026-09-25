@@ -1,6 +1,8 @@
 # MVE Precipitation
 
-This repository contains an R pipeline for constructing a data set of plot-level treatments and precipitation histories for the mean-variance experiment at the SEV LTER. The pipeline is implemented with [`targets`](https://docs.ropensci.org/targets/) and R packages are managed with [`renv`](https://rstudio.github.io/renv/).
+This repository contains an R pipeline for constructing a data set of plot-level treatments and precipitation histories for the mean-variance experiment (MVE) at the SEV LTER. The pipeline is implemented with [`targets`](https://docs.ropensci.org/targets/) and R packages are managed with [`renv`](https://rstudio.github.io/renv/).
+
+## Pipeline
 
 **Once before running the pipeline:**
 
@@ -33,3 +35,11 @@ usethis::edit_r_environ()
     1.  Create target objects (.rds) in a `_targets` directory.
     2.  Create figures (.png) in a `figures` directory.
     3.  Output processed data (.csv) in an `output` directory.
+
+## Outputs
+
+The primary outputs of the pipeline are precipitation histories for MVE plots reconstructed according to yearly MVE treatments. Precipitation data are derived from the (now-retired) [Meteorology Data from the Sevilleta National Wildlife Refuge, New Mexico](https://portal.edirepository.org/nis/mapbrowse?scope=knb-lter-sev&identifier=1) (Moore & Winter 2026). Note that missing precipitation values are omitted in the source data but are explicitly filled in as NAs here. Treatment info for each MVE site is also provided as output.
+
+## References
+
+Moore, D.I. and A.S. Winter. 2026. Retired Meteorology Data from the Sevilleta National Wildlife Refuge, New Mexico ver 20. Environmental Data Initiative. <https://doi.org/10.6073/pasta/8fde845dbda008312b5b43ff01377a1f> (Accessed 2026-09-25).
