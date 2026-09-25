@@ -67,3 +67,111 @@ download_precipitation <- function(site, stations) {
   
   out
 }
+
+#' Process precipitation data according to MVE treatments
+#'
+#' @param precipitation A data frame of precipitation data.
+#' @param processed_treatments A data frame of processed MVE treatments.
+#'
+#' @returns A data frame of processed precipitation data.
+process_precipitation <- function(precipitation, processed_treatments) {
+  # Expand precipitation data to all possible date-times
+  prec <- 
+    precipitation %>%
+    expand(
+      Site,
+      StationID,
+      Date_Time = seq(min(Date_Time), max(Date_Time), by = 3600)
+    ) %>%
+    left_join(precipitation, by = join_by(Site, StationID, Date_Time))
+  
+  # Reconstruct date-time columns
+  prec <- 
+    prec %>%
+    mutate(
+      Date = date(Date_Time),
+      Year = year(Date_Time),
+      Month = month(Date_Time),
+      Day_of_Month = mday(Date_Time),
+      Julian_Day = yday(Date_Time),
+      Hour = hour(Date_Time)
+    )
+  
+  # Join treatment info for each plot to precipitation data
+  out <- NULL
+  plots <- unique(processed_treatments$plot)
+  for (i in 1:length(plots)) {
+    # Get treatment info for focal plot
+    trts_i <- 
+      processed_treatments %>%
+      filter(plot == plots[i])
+    
+    # Prepare daily treatment info for focal plot
+    df <- NULL
+    for (j in 1:nrow(trts_i)) {
+      # Get treatment start date
+      # Assume missing start dates to be November 1st
+      start <- with(trts_i, {
+        if_else(
+          !is.na(date[j]),
+          date[j],
+          as_date(paste(year[j], 11, 1, sep = "-"))
+        )
+      })
+      
+      # Get treatment end date
+      # Assume missing end dates to be October 31st
+      end <- with(trts_i, {
+        if_else(
+          !is.na(date[j + 1]),
+          date[j + 1] - 1,
+          as_date(paste(year[j] + 1, 10, 31, sep = "-"))
+        )
+      })
+      
+      # Get treatment info for focal year
+      trts_j <- 
+        trts_i %>%
+        slice(j) %>%
+        select(-date)
+      
+      # Construct daily treatment info
+      daily_trts_j <- 
+        expand_grid(date = seq(start, end)) %>%
+        bind_cols(trts_j)
+      
+      # Bind daily treatment info
+      df <- 
+        df %>%
+        bind_rows(daily_trts_j)
+    }
+    
+    # Join daily treatment info to precipitation data
+    prec_i <- 
+      prec %>%
+      left_join(df, by = join_by(Site == site, Date == date)) %>%
+      filter(Date >= min(trts_i$date), Date <= end)
+    
+    # Bind to output
+    out <- 
+      out %>%
+      bind_rows(prec_i)
+  }
+  
+  # Compute precipitation history
+  out <- 
+    out %>%
+    mutate(Precipitation = Precipitation * (1 + (mean_var_val) / 100))
+  
+  # Clean up output
+  out <- 
+    out %>%
+    relocate(block, plot, .after = StationID) %>%
+    rename(Trt_Year = year) %>%
+    rename_with(\(x) gsub("_", " ", x), everything()) %>%
+    rename_with(tools::toTitleCase, everything()) %>%
+    rename_with(\(x) gsub(" ", "_", x), everything()) %>%
+    arrange(Site, Plot, Date_Time)
+  
+  out
+}

@@ -59,6 +59,10 @@ list(
     tar_target(
       precipitation,
       download_precipitation(site, stations)
+    ),
+    tar_target(
+      processed_precipitation,
+      process_precipitation(precipitation, processed_treatments)
     )
   )
 )
