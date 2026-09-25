@@ -74,6 +74,20 @@ list(
         width = 12,
         height = 8
       )
+    ),
+    tar_file(
+      output_treatments,
+      write_csv_file(
+        processed_treatments,
+        paste0("output/MVE-treatments-", site, ".csv")
+      )
+    ),
+    tar_file(
+      output_precipitation,
+      write_csv_file(
+        processed_precipitation,
+        paste0("output/MVE-precipitation-", site, ".csv")
+      )
     )
   )
 )
